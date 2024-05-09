@@ -1,0 +1,16 @@
+{% extends 'vendas/base.html' %}
+  {% block conteudo %}
+      <form action='{% url 'listagem_vendas'%}' method="post">
+        {% csrf_token %}
+        <div style="text-align: center;" class="container">
+        <h1>Cadastro de Vendas</h1>
+         
+         Data <input name="data" class="form-control-sm" type="text">
+         Produto <input name="produto" class="form-control-sm" type="text">
+         Cliente <input name="cliente" class="form-control-sm" type="text">
+         <button class="form-control-sm">Enviar</button>
+        </div>
+    </form>
+    {% endblock %}
+
+    

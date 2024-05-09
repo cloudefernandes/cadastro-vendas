@@ -1,0 +1,23 @@
+
+  {% extends 'vendas/base.html' %}
+  {% block conteudo %}
+  <div class ="container">
+    <h1>Vendas Cadastradas</h1>
+    <table class="table table-bordered table-striped">
+        <tr>
+        <th>id</th>
+        <th>Data</th>
+        <th>Produto</th>
+        <th>Cliente</th>
+        </tr>
+        {% for venda in vendas %}
+    <tr>
+        <td>{{venda.id_vendas}}</td>
+            <td>{{venda.data}}</td>
+            <td>{{venda.produto}}</td>
+            <td>{{venda.cliente}}</td>
+        </tr> 
+        {% endfor %}   
+    </table>
+</div>
+{% endblock %}
