@@ -1,5 +1,4 @@
-
-  {% extends 'vendas/base.html' %}
+{% extends 'vendas/base.html' %}
   {% block conteudo %}
   <div class ="container">
     <h1>Vendas Cadastradas</h1>
@@ -11,7 +10,7 @@
         <th>Valor</th>
         <th>Cliente</th>
         </tr>
-        {% for venda in vendas %}
+        {% for venda in listavendas %}
     <tr>
         <td>{{venda.id_vendas}}</td>
             <td>{{venda.data}}</td>
